@@ -18,6 +18,8 @@ alloc(n) checks if there is room for n left in allocbuf, if so it return the cur
     - If there is no room, alloc returns zero (C guarantees that zero is never a valid address for data). 
 4. afree(p) merely sets allocp to p if p is inside allocbuf.
 
+<img src="allocPointers.png" width="400">
+
 #### ALLOC
 ```c
 #include <stdio.h>
@@ -92,6 +94,8 @@ C does not provide any operators for processing an entire string of characters a
 1. amessage is an array, just big enough to hold the sequence of characters and ‘\0’ that initializes it. Individual characters within the array may be changed but amessage will always refer to the same storage. 
 ```char *pmessage = “now is the time”;```
 2. On the other hand, pmessage is a pointer, initialized to point to a string constant; the pointer may subsequently be modified to point elsewhere, but the result is undefined if you try to modify the string constants.
+
+<img src="messagePointers.png" width="400">
 
 #### STRINGS
 ```c
@@ -234,6 +238,7 @@ int main()
 
 #### POINTER ARRAYS; POINTERS TO POINTERS
 Since pointers are variables themselves, they can be stored in arrays just as other variables can. To sort a set of text lines into alphabetic order, instead of dealing with copying/moving over lines of text, we use double pointers. With an array of pointers, we can assign a pointer to the start of each string, and shuffle where each pointer points to based on the sort. This eliminates the problems of complicated storage management and high overhead that would go with moving the lines themselves.
+<img src="arrayPointers.png" width="400">
 
 ** walk through how this is done conceptually**  let them read the code in the textbook and understand what is happening
 
@@ -427,6 +432,7 @@ int main()
     return 0;
 }
 ```
+<img src="stringPointers.png" width="400">
 
 # Homework:
 The C Programming Language, 2nd Edition - Kerninghan & Ritchie
