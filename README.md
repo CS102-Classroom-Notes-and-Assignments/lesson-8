@@ -71,10 +71,10 @@ int main()
 
 #### Additional Pointer Rules:
 1. In general a pointer can be initialized just as any other variable can, though normally the only meaningful values are zero or an expression involving the address of previously defined data of appropriate type.
-2. Pointers and integers are not interchangeable. Zero is the sole exception: the constant zero may be assigned to a pointer, and a pointer may be compared with the constant zero. The symbolic constant NULL is often used in place of zero, as a mnemonic to indicate more clearly that this is a special value for a pointer. NULL is defined in <stdio.h>. 
-3. Any pointer can be compared for equality or inequality with zero. You can only do pointer arithmetic(==, != <, >=, ...) for pointers within the same array (or one element past the end of the array).
-4. A pointer and an integer may be added or subtracted. The construction p+n means the address of the nth object beyond the one p currently points to. This is true regardless of the kind of object p points to; n is scaled according to the size of the objects p points to, which is determined by the declaration of p. If an int is 4 bytes, the int will be scaled by four. 
-5. Pointer subtraction is also valid: if p and q point to elements of the same array, and p<q, then q-p+1 is the number of elements from p to q inclusive. This fact can be used to write yet another version of strlen:
+2. Pointers and integers are not interchangeable. Zero is the sole exception: **the constant zero may be assigned to a pointer, and a pointer may be compared with the constant zero.** The symbolic constant NULL is often used in place of zero, as a mnemonic to indicate more clearly that this is a special value for a pointer. NULL is defined in <stdio.h>. 
+3. Any pointer can be compared for equality or inequality with zero. You can **only do pointer arithmetic(==, != <, >=, ...) for pointers within the same array (or one element past the end of the array)**.
+4. **A pointer and an integer may be added or subtracted.** The construction p+n means the address of the nth object beyond the one p currently points to. This is true regardless of the kind of object p points to; n is scaled according to the size of the objects p points to, which is determined by the declaration of p. If an int is 4 bytes, the int will be scaled by four. 
+5.**** Pointer subtraction is also valid: if p and q point to elements of the same array, and p<q, then q-p+1 is the number of elements from p to q inclusive. This fact can be used to write yet another version of strlen:
 ```c
 int strlen(char *s){
 	char *p = s;
