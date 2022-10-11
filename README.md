@@ -435,5 +435,5 @@ int main()
 <img src="stringPointers.png" width="700">
 
 # Homework:
-The C Programming Language, 2nd Edition - Kerninghan & Ritchie
-Chapter 5.1-5.9
+- The C Programming Language, 2nd Edition - Kerninghan & Ritchie, Chapter 5.1-5.9
+- https://classroom.github.com/a/O0I0KpN2
