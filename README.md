@@ -83,7 +83,8 @@ int strlen(char *s){
 	return p-s;
 }
 ```
-	*** the number of characters in the string could be too large to store in an int. The header stddef.h> defines a type ptrdiff_t that is large enough to hold the signed difference of two pointer values. Or we could use size_t as the return value to match the standard library version. size_t is the unsigned integer type returned by the sizeof operator. 
+
+*** the number of characters in the string could be too large to store in an int. The header stddef.h> defines a type ptrdiff_t that is large enough to hold the signed difference of two pointer values. Or we could use size_t as the return value to match the standard library version. size_t is the unsigned integer type returned by the sizeof operator. 
 
 It is not legal to add pointers or assign pointers of one type to another type without a cast (except for void*). 
 
@@ -147,7 +148,7 @@ int main()
 }
 ```
 
-####STRCPY WITH POINTERS
+#### STRCPY WITH POINTERS
 ```c
 #include <stdio.h
 
@@ -238,7 +239,8 @@ int main()
 
 #### POINTER ARRAYS; POINTERS TO POINTERS
 Since pointers are variables themselves, they can be stored in arrays just as other variables can. To sort a set of text lines into alphabetic order, instead of dealing with copying/moving over lines of text, we use double pointers. With an array of pointers, we can assign a pointer to the start of each string, and shuffle where each pointer points to based on the sort. This eliminates the problems of complicated storage management and high overhead that would go with moving the lines themselves.
-<img src="arrayPointers.png" width="600">
+
+<img src="arrayPointers.png" width="700">
 
 ** walk through how this is done conceptually**  let them read the code in the textbook and understand what is happening
 
@@ -332,7 +334,7 @@ void swap(char *v[], int i, int j)
 #### MULTI-DIMENSIONAL ARRAYS
 C provides rectangular multi-dimensional arrays, although in practice they are much less used than arrays of pointers. 
 
-If we want a function to compute and return two values, we can make the arguments pointers as shown in the function below void month_day()
+If we want a function to compute and return two values, we can make the arguments pointers as shown in the function below ```void month_day()```
 
 #### SIMPLE DATE EXAMPLE
 ```c
@@ -387,12 +389,13 @@ int main()
 
 
 If a two-dimensional array is to be passed to a function, the parameter declaration in the function must include the number of columns; the number of rows is irrelevant, since what is passed is, as before, a pointer to an array of rows, where each row is an array of 13 ints. In this particular case, it is a pointer to objects that are arrays of 13 ints. Thus if the array daytab is to be passed to a function f, the declaration f would be:
+
 	```f(int daytab[2][13]) { … }```
   
-It could also be
+It could also be:
 	```f(int daytab[ ][13]) { … }```
 
-Or 
+Or: 
 	```f(int (*daytab)[13]) { … }```
 
 Which says that the parameter is a pointer to an array of 13 integers. 
