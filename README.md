@@ -436,4 +436,4 @@ int main()
 
 # Homework:
 - The C Programming Language, 2nd Edition - Kerninghan & Ritchie, Chapter 5.1-5.9
-- https://classroom.github.com/a/O0I0KpN2
+- hw link: https://classroom.github.com/a/O0I0KpN2
