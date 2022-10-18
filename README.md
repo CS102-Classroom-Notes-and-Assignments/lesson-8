@@ -389,7 +389,7 @@ int main()
 
 If a two-dimensional array is to be passed to a function, the parameter declaration in the function must include the number of columns; the number of rows is irrelevant, since what is passed is, as before, a pointer to an array of rows, where each row is an array of 13 ints. In this particular case, it is a pointer to objects that are arrays of 13 ints. Thus if the array daytab is to be passed to a function f, the declaration f would be:
 
-	```f(int daytab[2][13]) { … }```
+```f(int daytab[2][13]) { … }```
   
 It could also be:
 	```f(int daytab[ ][13]) { … }```
