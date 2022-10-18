@@ -242,7 +242,6 @@ Since pointers are variables themselves, they can be stored in arrays just as ot
 
 <img src="arrayPointers.png" width="700">
 
-** walk through how this is done conceptually**  let them read the code in the textbook and understand what is happening
 
 ```c
 #include <stdio.h>
