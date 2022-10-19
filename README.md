@@ -91,10 +91,11 @@ It is not legal to add pointers or assign pointers of one type to another type w
 
 #### CHARACTER POINTERS AND FUNCTIONS
 C does not provide any operators for processing an entire string of characters as a unit. There is an important difference between these definitions:
-```char amessage[] = “now is the time”;```
-1. amessage is an array, just big enough to hold the sequence of characters and ‘\0’ that initializes it. Individual characters within the array may be changed but amessage will always refer to the same storage. 
-```char *pmessage = “now is the time”;```
-2. On the other hand, pmessage is a pointer, initialized to point to a string constant; the pointer may subsequently be modified to point elsewhere, but the result is undefined if you try to modify the string constants.
+
+1. ```char amessage[] = “now is the time”;``` amessage is an array, just big enough to hold the sequence of characters and ‘\0’ that initializes it. Individual characters within the array may be changed but amessage will always refer to the same storage. 
+
+
+2. ```char *pmessage = “now is the time”;``` On the other hand, pmessage is a pointer, initialized to point to a string constant; the pointer may subsequently be modified to point elsewhere, but the result is undefined if you try to modify the string constants.
 
 <img src="messagePointers.png" width="500">
 
