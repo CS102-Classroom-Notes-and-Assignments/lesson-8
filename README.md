@@ -151,7 +151,7 @@ int main()
 
 #### STRCPY WITH POINTERS
 ```c
-#include <stdio.h
+#include <stdio.h>
 
 // K&R pg. 105
 // strcpy: copy t to s; poitner version 1
