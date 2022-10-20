@@ -2,6 +2,7 @@
 Please take the class time to go through the following lesson. The sections are accompanied by video links explaining the concepts as well as other helpful resources. The examples below are also explained in detail in the textbook.
 
 Review of pointers and arrays: https://www.youtube.com/watch?v=ASVB8KAFypk
+https://www.youtube.com/watch?v=qz_iz_PLorc
 
 #### Address Arithmetic
 https://www.tutorialspoint.com/cprogramming/c_pointer_arithmetic.htm
