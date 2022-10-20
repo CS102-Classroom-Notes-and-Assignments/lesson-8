@@ -1,7 +1,10 @@
 # lesson-8
+Review of pointers and arrays: https://www.youtube.com/watch?v=ASVB8KAFypk
 
 #### Address Arithmetic
-Writing a rudimentary storage allocator with two routines:
+https://www.tutorialspoint.com/cprogramming/c_pointer_arithmetic.htm
+
+Using address arithmetic we can write a rudimentary storage allocator with two routines:
 
 1. alloc(n) returns a pointer to n consecutive character positions which can be used by the caller of alloc for storing characters
 2. afree(p) releases the storage thus acquired so it can be re-used later. 
@@ -90,6 +93,8 @@ It is not legal to add pointers or assign pointers of one type to another type w
 
 
 #### CHARACTER POINTERS AND FUNCTIONS
+https://www.youtube.com/watch?v=Qp3WatLL_Hc
+
 C does not provide any operators for processing an entire string of characters as a unit. There is an important difference between these definitions:
 
 1. ```char amessage[] = “now is the time”;``` amessage is an array, just big enough to hold the sequence of characters and ‘\0’ that initializes it. Individual characters within the array may be changed but amessage will always refer to the same storage. 
@@ -150,6 +155,8 @@ int main()
 ```
 
 #### STRCPY WITH POINTERS
+https://www.youtube.com/watch?v=v4IQVXNVnlg
+
 ```c
 #include <stdio.h>
 
@@ -239,6 +246,9 @@ int main()
 ```
 
 #### POINTER ARRAYS; POINTERS TO POINTERS
+pointers to pointers: https://www.youtube.com/watch?v=d3kd5KbGB48
+
+
 Since pointers are variables themselves, they can be stored in arrays just as other variables can. To sort a set of text lines into alphabetic order, instead of dealing with copying/moving over lines of text, we use double pointers. With an array of pointers, we can assign a pointer to the start of each string, and shuffle where each pointer points to based on the sort. This eliminates the problems of complicated storage management and high overhead that would go with moving the lines themselves.
 
 <img src="arrayPointers.png" width="700">
@@ -332,6 +342,8 @@ void swap(char *v[], int i, int j)
 ```
 
 #### MULTI-DIMENSIONAL ARRAYS
+Pointers and 2-D arrays: https://www.youtube.com/watch?v=sHcnvZA2u88
+
 C provides rectangular multi-dimensional arrays, although in practice they are much less used than arrays of pointers. 
 
 If we want a function to compute and return two values, we can make the arguments pointers as shown in the function below ```void month_day()```
